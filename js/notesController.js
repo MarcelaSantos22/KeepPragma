@@ -10,6 +10,7 @@
     function noteController($state, $firebaseArray, $firebaseAuth, $localStorage) {
 
         var refNotas = firebase.database().ref().child('Notas');
+
         var vm = this;
 
         vm.tasks = $firebaseArray(refNotas);
@@ -25,6 +26,7 @@
 
         const user = firebase.auth().currentUser;
         // var credential = vm.$storage;
+        console.log(vm.tasks)
 
         // var credentials = firebase.auth.EmailAuthProvider.credential(credential);
         // user.reauthenticate(credential);

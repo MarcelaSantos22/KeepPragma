@@ -2,7 +2,7 @@
 	<ul>
 		<li class="tasks"  ng-repeat="task in vm.tasks | limitTo:vm.limit track by $index ">
 			<input type="checkbox" id="select" ng-model="task.state"/>
-			<div ng-click="vm.goEdit()" title="Click Para Editar">{{task.title}}
+			<div ng-click="vm.goEdit(task.id)" title="Click Para Editar">{{task.title}}
 				<div id="down-triangle"></div>
 				<!--<div id="tooltip">Realizada</div>-->
 			</div>

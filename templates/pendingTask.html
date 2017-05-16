@@ -1,0 +1,15 @@
+<nav class="pendingTask">
+    <ul>
+        <li class="tasks" ng-repeat="task in vm.pendingTask | limitTo:vm.limit track by $index">
+            <div>{{task.title}}
+                <div id="down-triangle"></div>
+            </div>
+            <p>{{task.description}}</p>
+            <p>{{task.date | date}}</p>
+            <p>{{task.state}}</p>
+        </li>
+    </ul>
+    <div class="center-align" ng-if="vm.pendingTask.length>9 && vm.pendingTask.length>vm.limit">
+        <a href="" class="btn btn-flat " ng-click="vm.increaseTaskNumber(6)">Cargar mas </a>
+    </div>
+</nav>

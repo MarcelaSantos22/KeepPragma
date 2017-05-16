@@ -1,0 +1,459 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Taviraj);
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Style Login and Register*/
+
+.container-login,
+.container-register {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecd4dc;
+    height: 100vh;
+}
+
+.form form {
+    position: relative;
+    background: #e37a9d;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    padding: 45px;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-box-shadow: 20px 17px 29px 0px rgba(7, 5, 0, 0.44);
+    -moz-box-shadow: 20px 17px 29px 0px rgba(7, 5, 0, 0.44);
+    box-shadow: 20px 17px 29px 0px rgba(7, 5, 0, 0.44);
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    background: #f2f2f2;
+    height: 7vh;
+    border: 0;
+    margin: 0 0 15px;
+    /* padding: 15px; */
+    padding: 0px 10px 0px 10px;
+    font-size: 14px;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    background: #6a0024;
+    border: 0;
+    margin: 0 0 15px;
+    height: 7vh;
+    /*padding: 15px;*/
+    padding: 0px 10px 0px 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+    box-shadow: 8px 6px 20px 3px rgb(101, 11, 52);
+    font-weight: bold;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: white;
+    font-size: 18px;
+}
+
+.form .message a {
+    color: #6a0024;
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 8px 5px 13px black;
+    font-weight: bold;
+}
+
+.form .error {
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+    color: red;
+    font-size: small;
+    font-style: italic;
+}
+
+
+/*Style Home*/
+
+.home-header {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    /*background-color: #fff;*/
+    border-bottom: 1px solid #6a0024;
+    box-shadow: -5px 10px 20px 13px rgba(72, 13, 39, 0.49);
+    z-index: 10;
+}
+
+.home-header .logo {
+    
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    padding: 15px 30px;
+    z-index: 40;
+    font-weight: bold;
+}
+
+.side-nav {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #6a0024;
+    display: none;
+    box-shadow: -5px 10px 20px 13px rgba(72, 13, 39, 0.71);
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.side-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.side-nav ul li {
+    padding: 16px 16px;
+    position: relative;
+    color: white;
+}
+
+.side-nav ul li.active:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.side-nav ul li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+.main-content {
+    padding: 40px;
+    margin-top: 0;
+    padding: 0;
+    padding-top: 44px;
+    height: 100%;
+    overflow: scroll;
+}
+
+.nav ul li a {
+    color: black;
+    display: block;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    border-bottom: 2px ridge;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.nav ul li a:hover {
+    background-color: #26000d;
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.nav ul li a:focus {
+    background-color: #26000d;
+    color: #ffffff;
+    border: 0;
+}
+
+.home-btn {
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.home-btn button {
+    position: absolute;
+    /* z-index: 2; */
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 51px;
+    background-color: #6a0024;
+    color: #f2f2f2;
+    box-shadow: 6px 4px 20px 1px #4e194e;
+}
+
+.home-btn button:hover {
+    background: #26000d;
+}
+
+
+/*Style Content-AllTask*/
+
+.content-task {
+    margin: 100px auto;
+    text-align: center;
+    font-size: 1.25em;
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+}
+
+.content-task ul {
+    margin-left: 0;
+    padding-left: 0;
+    width: 500px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+}
+
+.content-task ul li:hover>p {
+    display: block;
+}
+
+.content-task ul li {
+    float: left;
+    width: 500px;
+    text-align: left;
+    border-bottom: 2px solid #6a0024;
+}
+
+.content-task ul li:hover {
+    background: #f2f2f2;
+}
+
+.content-task ul li.tasks {
+    display: block;
+    padding: 15px 10px;
+    color: #2a2a2a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content-task ul p {
+    display: none;
+    border-radius: 0px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+}
+
+.content-task ul p {
+    float: none;
+    border-bottom: 2px solid #eaeaea;
+    position: relative;
+}
+
+.content-task ul li p {
+    padding: 15px 10px;
+    color: #838383;
+    cursor: pointer;
+}
+
+#down-triangle {
+    float: right;
+    width: 0;
+    height: 0;
+    margin-top: 10px;
+    border-top: 10px solid #6a0024;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+#select {
+    float: left;
+    border-style: ridge;
+    background-color: #6a0024;
+    margin: 5px 15px;
+}
+
+
+/*Style Content-PendingTask*/
+
+.pendingTask {
+    margin: 100px auto;
+    text-align: center;
+    font-size: 1.25em;
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+}
+
+.pendingTask ul {
+    margin-left: 0;
+    padding-left: 0;
+    width: 500px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+}
+
+.pendingTask ul li:hover>p {
+    display: block;
+}
+
+.pendingTask ul li {
+    float: left;
+    width: 500px;
+    text-align: left;
+    border-bottom: 2px solid #6a0024;
+}
+
+.pendingTask ul li:hover {
+    background: #f2f2f2;
+}
+
+.pendingTask ul li.tasks {
+    display: block;
+    padding: 15px 10px;
+    color: #2a2a2a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pendingTask ul p {
+    display: none;
+    border-radius: 0px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+}
+
+.pendingTask ul p {
+    float: none;
+    border-bottom: 2px solid #eaeaea;
+    position: relative;
+}
+
+.pendingTask ul li p {
+    padding: 15px 10px;
+    color: #838383;
+    cursor: pointer;
+}
+
+
+/*#down-triangle {
+	float: right;
+	width: 0; 
+ 	height: 0;
+ 	margin-top: 10px;
+ 	border-top: 10px solid #6a0024;
+  border-left: 10px solid transparent; 
+  border-right: 10px solid transparent; 
+}*/
+
+
+/*Style createTask*/
+
+.container-create, .container-edit
+{
+    position: relative;
+    display: flex;
+    /*max-height: 95; */
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: #ecd4dc; */
+}
+
+.create-form, .edit-form{
+    position: relative;
+    background: rgba(227, 122, 157, 0.39);
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    padding: 45px;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-box-shadow: 20px 17px 29px 0px rgba(7, 5, 0, 0.44);
+    -moz-box-shadow: 20px 17px 29px 0px rgba(7, 5, 0, 0.44);
+    box-shadow: 20px 17px 29px 0px rgba(7, 5, 0, 0.27);
+    margin-top: 15vh;
+}
+
+.create-form input, .edit-form input {
+    padding: 20px;
+}
+
+.create-form button , .edit-form button{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    background: #6a0024;
+    border: 0;
+    margin: 20px 0 15px;
+    height: 7vh;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+    color: #FFFFFF;
+    font-size: 18px;
+    box-shadow: 8px 6px 20px 3px rgb(101, 11, 52);
+    font-weight: bold;
+    border-radius: 10px;
+}
+/*
+@media only screen and (min-width: 320px) {
+    #mostrar-nav {
+        display: none;
+    }
+    .sidebar {
+        height: 100%;
+    }
+}*/
+
+/*@media only screen and (max-width: 320px) {
+    .sidebar {
+        width: 100%;
+        display: none;
+    }
+    .content {
+        margin-left: 0px;
+    }
+}*/
+
+
+/* set element styles to fit tablet and higher(desktop) */
+
+@media screen and (min-width: 600px) {
+    .home-header {
+        background-color: #6a0024;
+    }
+    .side-nav {
+        display: block;
+        width: 70px;
+        z-index: 2;
+    }
+    .side-nav ul li a {
+        text-align: center;
+    }
+    .main-content {
+        margin-left: 70px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .side-nav {
+        width: 200px;
+    }
+    .side-nav ul li a {
+        text-align: left;
+    }
+    .main-content {
+        margin-left: 200px;
+    }
+    .side-nav.visible {
+        display: block;
+    }
+}

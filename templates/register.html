@@ -1,0 +1,17 @@
+<div class="container-register">
+    <div class="form">
+        <form name="register-form">
+                <input type="email" name="email" ng-model="vm.user.email" id="email" placeholder="Email" autofocus required>
+                <span ng-show="register-form.email.$touched && register-form.email.$invalid">The email is required.</span>
+                
+                <input type="password" name="password" ng-model="vm.user.pws" id="password" placeholder="Password" required>
+                <span ng-show="register-form.password.$touched && register-form.password.$invalid">The password is required.</span>
+                
+                <p class="error" ng-show="vm.errMsg">{{vm.errorMessage}}</p>
+                <button type="submit" ng-disabled="register-form.$invalid" ng-click="vm.register()" id="registrar">
+                    Sign Up
+                </button>
+            <p class="message">Already registered? <a ng-click="vm.goLogin()">Sign In</a></p>
+        </form>
+    </div>
+</div>

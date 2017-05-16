@@ -1,0 +1,21 @@
+<div class="home-header">
+    <!--<a href="#" class="nav-trigger"><span></span></a>-->
+    <div class="logo">
+        <span>Keep Pragma</span>
+    </div>
+</div>
+<div class="side-nav">
+    <nav class="nav">
+        <ul>
+            <li><a ui-sref=".allTask">Tareas</a></li>
+            <li><a ui-sref=".completTask">Tareas Realizadas</a></li>
+            <li><a ui-sref=".pendingTask">Tareas Pendientes</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="main-content">
+    <div ui-view></div>
+</div>
+<div class="home-btn">
+    <button type="submit" ui-sref=".createTask" id="newTask">+</button>
+</div>

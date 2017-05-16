@@ -1,1 +1,16 @@
-<h1>Tareas Completadas</h1>
+<nav class="content-task">
+    <ul>
+        <li class="tasks" ng-repeat="task in vm.tasks | limitTo:vm.limit track by $index" ng-if="task.state == 'Realizada'">
+            <div ng-click="vm.goEdit(task.$id)" title="Click Para Editar">{{task.title}}
+                <div id="down-triangle"></div>
+            </div>
+            <p>{{task.description}}</p>
+            <p>{{task.date | date}}</p>
+            <p>{{task.state}}</p>
+        </li>
+    </ul>
+    <div class="center-align" ng-if=" vm.tasks.length>9 && vm.tasks.length>vm.limit">
+        <a class="upload" ng-click="vm.increaseTaskNumber(6)">Cargar mas</a>
+    </div>
+</nav>
+

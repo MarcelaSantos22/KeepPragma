@@ -2,18 +2,22 @@
     <div class="edit-form">
         <!--<h1><strong>Editar</strong></h1>-->
         <form name="edit-form">
-            <input type="text" ng-model="vm.newTask.title" id="title" placeholder="Titulo" autofocus>
+            <input type="text" ng-model="vm.editPostData.title" id="title" value="Titulo" autofocus>
             <div><span ng-show="edit-form.title.$touched && edit-form.title.$invalid">The title is required.</span></div>
-
-            <input ng-model="vm.newTask.description" type="text" id="description" placeholder="Descripcion">
+            <label for="desc"></label>
+            <input ng-model="vm.editPostData.description" type="text" id="description" placeholder="Descripcion">
             <div  class="datePicker">
                 <p>Fecha de Terminación</p>
-                <input type="date" name="fecha" ng-model="vm.newTask.date">
+                <input type="date" name="fecha" ng-model="vm.editPostData.date">
                 <!--<md-datepicker ng-model="vm.myDate" ></md-datepicker>-->
             </div>
             <div>
-                <button type="submit" ng-disabled="edit-form.$invalid" ng-click="vm.editTask(vm.newTask.id)" id="nTask">
+                <button type="submit" ng-disabled="edit-form.$invalid" ng-click="vm.updateTask()" id="nTask">
                     <strong>Editar</strong></button>
+            </div>
+             <div>
+                <button type="submit" ng-click="vm.cancelTask()" id="cancel">
+                    <strong>Cancelar</strong></button>
             </div>
         </form>
     </div>

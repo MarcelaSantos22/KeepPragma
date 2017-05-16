@@ -1,11 +1,13 @@
 <div class="home-header">
-    <!--<a href="#" class="nav-trigger"><span></span></a>-->
     <div class="logo">
         <span>Keep Pragma</span>
+        <!--<input type="text" id="search" placeholder="Buscar Tarea" ng-change="vm.saveSearch()" ng-model="vm.searchText"/>-->
+        <a  id="logout" ng-click="vm.logout()">Cerrar Sesion</a>        
     </div>
 </div>
 <div class="side-nav">
     <nav class="nav">
+        <div id="user">{{vm.user}}</div>
         <ul>
             <li><a ui-sref=".allTask">Tareas</a></li>
             <li><a ui-sref=".completTask">Tareas Realizadas</a></li>

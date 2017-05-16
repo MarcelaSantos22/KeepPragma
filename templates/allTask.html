@@ -1,8 +1,8 @@
 <nav class="content-task">
 	<ul>
-		<li class="tasks"  ng-repeat="task in vm.tasks | limitTo:vm.limit track by $index ">
-			<input type="checkbox" id="select" ng-model="task.state"/>
-			<div ng-click="vm.goEdit(task.id)" title="Click Para Editar">{{task.title}}
+		<li class="tasks"  ng-repeat="task in vm.tasks | limitTo:vm.limit track by $index" >
+			<button type="submit" id="select" title="Tarea Realizada" ng-click="vm.changeState(task.$id)"></button>
+			<div ng-click="vm.goEdit(task.$id)" title="Click Para Editar">{{task.title}}
 				<div id="down-triangle"></div>
 				<!--<div id="tooltip">Realizada</div>-->
 			</div>
@@ -11,10 +11,7 @@
 			<p>{{task.state}}</p>
 		</li>
 	</ul>
-	<div class="btn-complet" ng-if="vm.tasks.$getIndex().length != 0">
-		<a type="submit" ui-sref=".allTask" ng-click="vm.completTask()">Tarea Realizada</a>
-	</div>
 	<div class="center-align" ng-if="vm.tasks.length>9 && vm.tasks.length>vm.limit">
-		<p class="btn btn-flat " ng-click="vm.increaseTaskNumber(6)">Cargar mas</p>
+		<a class="upload" ng-click="vm.increaseTaskNumber(6)">Cargar mas</a>
 	</div>
 </nav>
